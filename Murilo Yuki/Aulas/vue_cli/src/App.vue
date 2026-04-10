@@ -7,10 +7,15 @@
     <home-component />
     <hr />
     <br />
-    <usuario-component />
+    <usuario-component v-show="isUsuarioVisivel" />
     <hr />
     <br />
     <estilo-component/>
+    <hr />
+    <br />
+    <imagem-component 
+    @visibilidade-img ="escutarVisibilidadeImg"
+    urlImg="https://super.abril.com.br/wp-content/uploads/2018/05/humanidade-causa-cc3a2ncer-em-animais-selvagens.png?crop=1&resize=1212,909" larg="500"/>
   </div>
 </template>
 
@@ -18,8 +23,7 @@
 import HomeComponent from './components/HomeComponent.vue';
 import UsuarioComponent from './components/UsuarioComponent.vue';
 import EstiloComponent from './components/EstiloComponent.vue';
-
-
+import ImagemComponent from './components/ImagemComponent.vue';
 
 export default {
   name: 'App',
@@ -27,6 +31,18 @@ export default {
     HomeComponent,
     UsuarioComponent,
     EstiloComponent,
+    ImagemComponent,
+  },
+
+  data() {
+    return {
+      isUsuarioVisivel: false,
+    };
+  },
+  methods:{
+    escutarVisibilidadeImg(isImgComponentVisivel){
+      this.isUsuarioVisivel = !isImgComponentVisivel;
+    }
   },
 created(){
   console.log("created")
