@@ -24,7 +24,7 @@
         mounted(){
             setTimeout(() => {
                 this.isBrasaCampeao = true;
-                this.urlimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnlqmoclGTRWaLnMylj4--6OGzfJV0aVZtw&s"
+                this.urlimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnlqmoclGTRWaLnMylj4--6OGzfJV0aVZtw&s" 
             }, 4 * 1000);
 
         setTimeout(() => {
